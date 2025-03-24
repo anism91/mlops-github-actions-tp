@@ -17,3 +17,9 @@ def test_predict_neutral():
     Test the predict_sentiment function for a neutral sentiment.
     """
     assert predict_sentiment("The sky is blue") == "neutral"
+
+def test_predict_simple():
+    """
+    Test the predict_sentiment function for the word 'simple'.
+    """
+    assert predict_sentiment("This is a simple test") == "neutral-simple"
