@@ -1,4 +1,5 @@
 name: Evaluate Model
+
 on:
   push:
     branches: [ main ]
@@ -17,7 +18,7 @@ jobs:
       - name: Evaluate model
         run: python metrics.py
       - name: Upload metrics
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: model-metrics
           path: metrics.json
